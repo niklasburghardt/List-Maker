@@ -16,4 +16,11 @@ public class Properties{
         this.birth = birth;
     }
 
+    public void editByPropertie(String prop, String firstName, String name, String phone, String email, String birth){
+        Input in = new Input();
+        for(int i = 0; i<in.people.size(); i++){
+            
+        }
+    }
+
 }

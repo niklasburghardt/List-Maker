@@ -19,7 +19,7 @@ public class Input {
                 System.out.print(propNames[i]+": ");
                 current[i] = scanner.nextLine();
                 //test
-                if(current[i] == "skip"){
+                if(current[i].equals("skip")){
                     break mark;
                 }
             }
@@ -29,11 +29,17 @@ public class Input {
         scanner.close();
     }
 
+    void showList(){
+        for(int i = 0; i<people.size(); i++){
+            System.out.println(people.get(i).name+", "+ people.get(i).firstName);
+        }
+    }
+
     
 
     public static void main(String[] args){
         Input i = new Input();
-        i.firstInput();
-
+        i.addUsers();
+        i.showList();
     }
 }
