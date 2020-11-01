@@ -11,7 +11,7 @@ public class Input {
     String[] propNames = {"First Name", "Name", "Phone", "Email", "Birthday"};
 
 
-    public void firstInput(){
+    public void addUsers(){
         Scanner scanner = new Scanner(System.in);
         String[] current = new String[propNames.length];
         mark: while(true){
@@ -24,7 +24,7 @@ public class Input {
                 }
             }
             people.add(new Properties(current[0], current[1], current[2], current[3], current[4]));
-            System.out.println("USER ADDED SUCCESSFULLY");
+            System.out.println("USER ADDED SUCCESSFULLY...");
         }
         scanner.close();
     }
