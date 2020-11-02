@@ -23,6 +23,6 @@ public class Properties implements Comparable<Properties>{
     @Override
     public int compareTo(Properties u) {
       
-      return name.compareTo(u.name);
+      return name.compareTo(u.name+firstName);
     }
 }

@@ -7,7 +7,6 @@ import java.util.Scanner;
 
 import Sorting.Sort;
 
-
 public class Input {
 
     public List<Properties> people = new ArrayList<Properties>();
@@ -50,11 +49,11 @@ public class Input {
     public String[] inputProperties(){
         Scanner scanner = new Scanner(System.in);
         String[] current = new String[propNames.length];
+        System.out.println();
         for(int i = 0; i<propNames.length; i++){
-            System.out.print(propNames[i]+": ");
+            System.out.println(propNames[i]+": ");
             current[i] = scanner.nextLine();
         }
-        scanner.close();
         return current;
     }
 
@@ -71,6 +70,10 @@ public class Input {
     public static void main(String[] args){
         Input i = new Input();
         i.addUsers();
+        i.showList();
+        Sort s = new Sort();
+        s.sort(i.people);
+        i.showList();
         
     }
 }
