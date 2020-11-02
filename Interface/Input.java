@@ -5,14 +5,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
-import Sorting.Sort;
-
 public class Input {
 
     public List<Properties> people = new ArrayList<Properties>();
     String[] propNames = {"First Name", "Name", "Phone", "Email", "Birthday"};
 
-
+    //Adding a user to the end of the list
     public void addUsers(){
         String[] current;
         while(true){
@@ -24,7 +22,7 @@ public class Input {
             System.out.println("USER ADDED SUCCESSFULLY...");
         }
     }
-
+    //finding a user by his name
     public String[] findUser(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("NAME: ");
@@ -33,7 +31,7 @@ public class Input {
         scanner.close();
         return name;
     }
-
+    //change the properties of a user that was found by findUser()
     public void changeByProperty(){
         String[] name = findUser();
 
@@ -45,7 +43,7 @@ public class Input {
             }
         }
     }
-
+    //input the Properties for the funcion
     public String[] inputProperties(){
         Scanner scanner = new Scanner(System.in);
         String[] current = new String[propNames.length];
@@ -68,12 +66,6 @@ public class Input {
     
 
     public static void main(String[] args){
-        Input i = new Input();
-        i.addUsers();
-        i.showList();
-        Sort s = new Sort();
-        s.sort(i.people);
-        i.showList();
         
     }
 }

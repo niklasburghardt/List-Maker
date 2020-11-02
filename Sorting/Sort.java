@@ -7,7 +7,7 @@ import Interface.Properties;
 
 public class Sort{
 
-    public List<Properties> sort(List<Properties> unsorted){
+    public List<Properties> sortName(List<Properties> unsorted){
         Collections.sort(unsorted);
         return unsorted;
     }
