@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
+import Sorting.Sort;
+
 
 public class Input {
 
@@ -24,11 +26,17 @@ public class Input {
         }
     }
 
-    public void changeByProperty(){
+    public String[] findUser(){
         Scanner scanner = new Scanner(System.in);
         System.out.print("NAME: ");
         String[] name = scanner.nextLine().split(" ");
         System.out.println(Arrays.toString(name));
+        scanner.close();
+        return name;
+    }
+
+    public void changeByProperty(){
+        String[] name = findUser();
 
         for(Properties prop : people){
             if(prop.firstName.equals(name[0]) && prop.name.equals(name[1])){
@@ -46,9 +54,11 @@ public class Input {
             System.out.print(propNames[i]+": ");
             current[i] = scanner.nextLine();
         }
-
+        scanner.close();
         return current;
     }
+
+
 
     void showList(){
         for(int i = 0; i<people.size(); i++){
@@ -61,8 +71,6 @@ public class Input {
     public static void main(String[] args){
         Input i = new Input();
         i.addUsers();
-        i.showList();
-        i.changeByProperty();
-        i.showList();
+        
     }
 }
